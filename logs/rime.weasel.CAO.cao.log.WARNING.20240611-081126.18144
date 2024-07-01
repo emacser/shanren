@@ -1,0 +1,6 @@
+Log file created at: 2024/06/11 08:11:26
+Running on machine: CAO
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W20240611 08:11:26.400076 18188 registry.cc:16] replacing previously registered component: charset_filter
+E20240611 08:11:26.650405 22296 level_db.cc:259] Error opening db 'sunman': IO error: F:\apps\weasel-0.14.3\data\sunman.userdb/LOCK: 另一个程序正在使用此文件，进程无法访问。

@@ -1,0 +1,54 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+---
+name: sunman
+version: 2020.08.10
+use_preset_vocabulary: false
+sort: by_original
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  exclude_patterns:
+    - "^[a-z]$" # 一简不参与造词
+    - "[^a-z]"
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaAbBaBbCaCb"
+    - length_equal: 4
+      formula: "AaAbBaBbCaCbDaDb"
+    - length_equal: 5
+      formula: "AaAbBaBbCaCbDaDbEaEb"
+    - length_equal: 6
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFb"
+    - length_equal: 7
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGb"
+    - length_equal: 8
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHb"
+    - length_equal: 9
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIb"
+    - length_equal: 10
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJb"
+    - length_equal: 11
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJbKaKb"
+    - length_equal: 12
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJbKaKbLaLb"
+    - length_equal: 13
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJbKaKbLaLbMaMb"
+    - length_equal: 14
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJbKaKbLaLbMaMbNaNb"
+    - length_equal: 15
+      formula: "AaAbBaBbCaCbDaDbEaEbFaFbGaGbHaHbIaIbJaJbKaKbLaLbMaMbNaNbOaOb"
+import_tables:
+  - sunman.brevity
+  - sunman.words
+  - sunman.phrases1
+  - sunman.phrases2
+  - sunman.extended
+
+---
+

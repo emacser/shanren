@@ -1,0 +1,9 @@
+2024/07/01-08:07:15.570000 24800 Log #713: 0 ops saved2024/07/01-08:07:152024/07/01-08:07:15.828000 24800 Archiving F:\apps\weasel-0.14.3\data\luna_pinyin.userdb/000713.log: OK
+2022024/07/01-08:07:16.511000 25428 Delete type=3 #711
+ OK
+2024/07/01-08:07:16.226000 24800 Table #703: 4 entries OK
+2024/07/01-08:07:16.486000 24800 Table #706: 34 entries OK
+2024/07/01-08:07:16.516000 24800 Table #712: 20 entries OK
+2024/07/01-08:07:16.516000 24800 Archiving F:\apps\weasel-0.14.3\data\luna_pinyin.userdb/MANIFEST-000711: NotFound: F:\apps\weasel-0.14.3\data\luna_pinyin.userdb/MANIFEST-000711: 系统找不到指定的文件。
+
+2024/07/01-08:07:18.725000 24800 **** Repaired leveldb F:\apps\weasel-0.14.3\data\luna_pinyin.userdb; recovered 4 files; 11887 bytes. Some data may have been lost. ****

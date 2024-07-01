@@ -1,0 +1,7 @@
+2024/07/01-08:07:14.112000 24800 Log #740: 0 ops saved to Table #741 OK
+2024/07/01-08:07:14.112000 24800 Archiving F:\apps\weasel-0.14.3\data\sunman.userdb/000740.log: OK
+2024/07/01-08:07:14.112000 24800 Table #737: 3150 entries OK
+2024/07/01-08:07:14.112000 24800 Table #738: 1698 entries OK
+2024/07/01-08:07:14.113000 24800 Table #739: 1698 entries OK
+2024/07/01-08:07:14.113000 24800 Archiving F:\apps\weasel-0.14.3\data\sunman.userdb/MANIFEST-000738: OK
+2024/07/01-08:07:14.757000 24800 **** Repaired leveldb F:\apps\weasel-0.14.3\data\sunman.userdb; recovered 3 files; 203720 bytes. Some data may have been lost. ****

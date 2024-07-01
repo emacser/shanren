@@ -1,0 +1,25 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.15.0.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Fri Jun  9 15:23:37 2023"
+  rime_version: 1.8.5
+patch:
+  style:
+    color_font: true
+    color_scheme: so_young
+    comment_font_face: "TH-Tshyn-P0:bold,  TH-Sung-TP2"
+    comment_font_point: 16
+    display_tray_icon: true
+    font_face: "Huiwen-mincho:bold, Segoe UI Emoji:1f000:1f09f:bold, Noto Color Emoji SVG:80, TH-Sung-TP2, TH-Tshyn-P16"
+    font_point: 20
+    fullscreen: false
+    hide_candidates_when_single: false
+    horizontal: true
+    inline_preedit: false
+    label_font_face: "Segoe UI, Segoe UI Emoji:1f000:1f09f, Noto Color Emoji SVG:80, TH-Sung-TP2, TH-Tshyn-P16"
+    label_font_point: 20
+    label_format: "%s."
+    layout: {align_type: bottom, border_width: 3, candidate_spacing: 10, corner_radius: 15, hilite_padding: 5, hilite_spacing: 10, margin_x: 15, margin_y: 10, min_height: 0, min_width: 50, round_corner: 0, shadow_offset_x: 3, shadow_offset_y: 3, shadow_radius: 3, spacing: 15}
+    preedit_type: composition
+  "style/color_scheme": solarized_rock

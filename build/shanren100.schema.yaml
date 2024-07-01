@@ -1,0 +1,24 @@
+__build_info:
+  rime_version: 1.11.2
+  timestamps:
+    default: 1627551414
+    default.custom: 1657776244
+    key_bindings: 1644994440
+    key_bindings.custom: 0
+    punctuation: 1644994440
+    punctuation.custom: 0
+    shanren100.custom: 0
+    shanren100.schema: 1487574984
+engine:
+  translators:
+    - table_translator
+menu:
+  page_size: 5
+schema:
+  description: |
+    生成詞庫bin的簡易方案，已与山人方案建立關聯，不用勾選
+
+  name: "山人詞庫"
+  schema_id: shanren100
+translator:
+  dictionary: shanren100

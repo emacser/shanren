@@ -1,0 +1,24 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.11.1
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sun Apr 29 20:39:58 2018"
+  rime_version: 1.3.0
+patch:
+  "style/hemispherical_dome": true
+  style/horizontal: false # 
+  "style/font_point": 14
+#    "margin_x": 10
+#    "margin_y": 10
+  switches/@next:
+    name: emoji_suggestion
+    reset: 1
+    states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+  'engine/filters/@before 0':
+    simplifier@emoji_suggestion
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: all
+   
+    

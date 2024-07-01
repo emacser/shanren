@@ -1,0 +1,163 @@
+Log file created at: 2024/06/11 08:18:12
+Running on machine: CAO
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240611 08:18:12.158411  4176 core_module.cc:20] registering core components.
+I20240611 08:18:12.158411  4176 registry.cc:14] registering component: config_builder
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: config
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: schema
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: user_config
+I20240611 08:18:12.159408  4176 dict_module.cc:25] registering components from module 'dict'.
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: tabledb
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: stabledb
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: plain_userdb
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: userdb
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: corrector
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: dictionary
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: reverse_lookup_dictionary
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: user_dictionary
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: userdb_recovery_task
+I20240611 08:18:12.159408  4176 gears_module.cc:42] registering components from module 'gears'.
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: ascii_composer
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: chord_composer
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: express_editor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: fluid_editor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: fluency_editor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: key_binder
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: navigator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: punctuator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: recognizer
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: selector
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: speller
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: shape_processor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: abc_segmentor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: affix_segmentor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: ascii_segmentor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: matcher
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: punct_segmentor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: fallback_segmentor
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: echo_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: punct_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: table_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: script_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: r10n_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: reverse_lookup_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: schema_list_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: switch_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: history_translator
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: simplifier
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: uniquifier
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: charset_filter
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: cjk_minifier
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: reverse_lookup_filter
+I20240611 08:18:12.159408  4176 registry.cc:14] registering component: single_char_filter
+I20240611 08:18:12.270113  4176 registry.cc:14] registering component: shape_formatter
+I20240611 08:18:12.270113  4176 registry.cc:14] registering component: codepoint_translator
+I20240611 08:18:12.270113  4176 registry.cc:14] registering component: charset_filter
+W20240611 08:18:12.270113  4176 registry.cc:16] replacing previously registered component: charset_filter
+I20240611 08:18:12.270113  4176 modules.cc:94] registering components from module 'lua'.
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: lua_translator
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: lua_filter
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: lua_segmentor
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: lua_processor
+I20240611 08:18:12.273104  4176 grammar_module.cc:15] registering components from module 'grammar'.
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: grammar
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: predictor
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: predict_translator
+I20240611 08:18:12.273104  4176 levers_module.cc:22] registering components from module 'levers'.
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: detect_modifications
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: installation_update
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: workspace_update
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: schema_update
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: config_file_update
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: prebuild_all_schemas
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: user_dict_upgrade
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: cleanup_trash
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: user_dict_sync
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: backup_config_files
+I20240611 08:18:12.273104  4176 registry.cc:14] registering component: clean_old_log_files
+I20240611 08:18:12.273104  4176 deployment_tasks.cc:85] updating rime installation info.
+I20240611 08:18:12.273104  4176 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\installation.yaml"'.
+I20240611 08:18:12.274101  4176 deployment_tasks.cc:103] installation info exists. installation id: 0f0455dc-4b33-4407-a3aa-aa17d63fe9cc
+I20240611 08:18:12.274101  4176 deployment_tasks.cc:114] sync dir: "F:\\apps\\weasel-0.14.3\\data\\sync"
+I20240611 08:18:12.274101  4176 deployment_tasks.cc:116] previous distribution: Weasel
+I20240611 08:18:12.274101  4176 deployment_tasks.cc:119] previous distribution version: 0.15.1.0
+I20240611 08:18:12.274101  4176 deployment_tasks.cc:122] previous Rime version: 1.9.0
+I20240611 08:18:12.279088  4176 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\user.yaml"'.
+I20240611 08:18:12.279088  4176 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\build\\weasel.yaml"'.
+I20240611 08:18:12.332973 18688 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\build\\default.yaml"'.
+I20240611 08:18:12.333971 18688 engine.cc:74] starting engine.
+I20240611 08:18:12.333971 18688 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\user.yaml"'.
+I20240611 08:18:12.333971 18688 engine.cc:130] updated option: simplification
+I20240611 08:18:12.333971 18688 config_data.cc:68] loading config file '"F:\\apps\\weasel-0.14.3\\data\\build\\sunman.schema.yaml"'.
+I20240611 08:18:12.344939 18688 engine.cc:130] updated option: _auto_commit
+I20240611 08:18:12.344939 18688 dictionary.cc:324] loading dictionary 'sunman'.
+I20240611 08:18:12.344939 18688 table.cc:254] loading table file: "F:\\apps\\weasel-0.14.3\\data\\build\\sunman.table.bin"
+I20240611 08:18:12.347932 18688 prism.cc:76] loading prism file: "F:\\apps\\weasel-0.14.3\\data\\build\\sunman.prism.bin"
+I20240611 08:18:12.347932 18688 prism.cc:106] found double array image of size 2567424.
+I20240611 08:18:12.347932 18688 dictionary.cc:324] loading dictionary 'sunman'.
+I20240611 08:18:12.801580 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build\\sunman.reverse.bin"
+I20240611 08:18:12.807566 18688 dictionary.cc:324] loading dictionary 'luna_pinyin'.
+I20240611 08:18:12.807566 18688 table.cc:254] loading table file: "F:\\apps\\weasel-0.14.3\\data\\build\\luna_pinyin.table.bin"
+I20240611 08:18:12.809561 18688 prism.cc:76] loading prism file: "F:\\apps\\weasel-0.14.3\\data\\build\\luna_pinyin.prism.bin"
+I20240611 08:18:12.809561 18688 prism.cc:106] found double array image of size 1792.
+I20240611 08:18:13.047959 18688 dictionary.cc:324] loading dictionary 'luna_pinyin'.
+I20240611 08:18:13.064914 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman_spelling_pseudo.reverse.bin"
+I20240611 08:18:13.065912 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:18:13.069901 18688 engine.cc:130] updated option: sunman_spelling.lv3
+I20240611 08:18:13.069901 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman_spelling_pseudo.reverse.bin"
+I20240611 08:18:13.071897 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:18:13.075911 18688 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:18:13.080904 18688 engine.cc:130] updated option: standard
+I20240611 08:18:13.080904 18688 engine.cc:130] updated option: big5
+I20240611 08:18:13.080904 18688 engine.cc:130] updated option: gbk
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: utf8
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: ascii_mode
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: traditionalization
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: sunman_spelling.off
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: sunman_spelling.lv1
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: sunman_spelling.lv2
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: sunman_spelling.lv3
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: sunman_postpone_fullcode
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: emoji_suggestion
+I20240611 08:18:13.081868 18688 engine.cc:144] updated property: client_app
+I20240611 08:18:13.081868 18688 engine.cc:144] updated property: client_type
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: inline_preedit
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: soft_cursor
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: inline_preedit
+I20240611 08:18:13.081868 18688 engine.cc:130] updated option: soft_cursor
+I20240611 08:19:05.917088  8924 engine.cc:74] starting engine.
+I20240611 08:19:05.917088  8924 engine.cc:130] updated option: simplification
+I20240611 08:19:05.917088  8924 engine.cc:130] updated option: _auto_commit
+I20240611 08:19:05.917088  8924 dictionary.cc:324] loading dictionary 'sunman'.
+I20240611 08:19:05.917088  8924 dictionary.cc:324] loading dictionary 'sunman'.
+I20240611 08:19:05.918084  8924 dictionary.cc:324] loading dictionary 'luna_pinyin'.
+I20240611 08:19:05.918084  8924 dictionary.cc:324] loading dictionary 'luna_pinyin'.
+I20240611 08:19:05.918084  8924 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman_spelling_pseudo.reverse.bin"
+I20240611 08:19:05.919081  8924 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:19:05.925066  8924 engine.cc:130] updated option: sunman_spelling.lv3
+I20240611 08:19:05.925066  8924 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman_spelling_pseudo.reverse.bin"
+I20240611 08:19:05.926062  8924 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:19:05.934042  8924 reverse_lookup_dictionary.cc:33] loading reversedb: "F:\\apps\\weasel-0.14.3\\data\\build/sunman.reverse.bin"
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: standard
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: big5
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: gbk
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: utf8
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: ascii_mode
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: traditionalization
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: sunman_spelling.off
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: sunman_spelling.lv1
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: sunman_spelling.lv2
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: sunman_spelling.lv3
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: sunman_postpone_fullcode
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: emoji_suggestion
+I20240611 08:19:05.943019  8924 engine.cc:144] updated property: client_app
+I20240611 08:19:05.943019  8924 engine.cc:144] updated property: client_type
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: inline_preedit
+I20240611 08:19:05.943019  8924 engine.cc:130] updated option: soft_cursor
+I20240611 08:19:05.944042  8924 engine.cc:130] updated option: inline_preedit
+I20240611 08:19:05.944042  8924 engine.cc:130] updated option: soft_cursor
+I20240611 08:21:14.223446  4176 engine.cc:93] engine disposed.
+I20240611 08:21:14.223446  4176 engine.cc:93] engine disposed.
+I20240611 08:21:14.224443  4176 level_db.cc:284] closed db 'sunman'.
+I20240611 08:21:14.224443  4176 level_db.cc:284] closed db 'luna_pinyin'.

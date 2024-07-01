@@ -1,0 +1,181 @@
+__build_info:
+  rime_version: 1.9.0
+  timestamps:
+    default: 1627551414
+    default.custom: 1657776244
+    key_bindings: 1644994440
+    key_bindings.custom: 0
+    punctuation: 1644994440
+    punctuation.custom: 0
+    shanren.custom: 1659400752
+    shanren.schema: 1611709422
+ascii_composer:
+  {}
+engine:
+  filters:
+    - simplifier
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+key_binder:
+  bindings:
+    - {accept: comma, send: Page_Up, when: has_menu}
+    - {accept: period, send: Page_Down, when: has_menu}
+    - {accept: "Shift+Shift_L", send: 2, when: has_menu}
+    - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+    - {accept: Tab, send: ";", when: composing}
+    - {accept: "Control+d", send: "Shift+Delete", when: composing}
+menu:
+  page_size: 5
+punctuator:
+  full_shape:
+    " ": {commit: "　"}
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": ["＃", "⌘"]
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["％", "°", "℃"]
+    "&": "＆"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["＊", "·", "・", "×", "※", "❂"]
+    "+": "＋"
+    ",": {commit: "，"}
+    "-": "－"
+    .: {commit: "。"}
+    "/": "、"
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "＝"
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": ["＠", "☯"]
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["＼", "／", "÷"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "｀"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "～"
+  half_shape:
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": "#"
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["%", "％", "°", "℃"]
+    "&": "&"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["*", "＊", "·", "・", "×", "※", "❂"]
+    "+": "+"
+    ",": {commit: "，"}
+    "-": "-"
+    .: {commit: "。"}
+    "/": "、"
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "="
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": "@"
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["\\", "/"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "`"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "|", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": ["~", "～"]
+  import_preset: default
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    reverse_lookup: "`[a-z]*'?$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+reverse_lookup:
+  dictionary: pinyin_simp
+  preedit_format:
+    - "xform/([nl])v/$1ü/"
+    - "xform/([nl])ue/$1üe/"
+  prefix: "`"
+  prism: pinyin_simp
+  suffix: "'"
+  tips: "〔拼音〕"
+schema:
+  author:
+    - "谢振斌"
+  dependencies:
+    - pinyin_simp
+    - shanren100
+  description: |
+    山人全息码
+
+  name: "山人"
+  schema_id: shanren
+  version: 2013.12.16
+simplifier:
+  option_name: pinyin_simp
+speller:
+  algebra:
+    - "xform/^([A-Za-z]+)_.*$/$1/"
+    - "derive/^([A-Z])([A-Z]+)([a-z])([a-z])$/$1$4$2$3/"
+    - "derive/^([A-Z]+)([a-z])[a-z]$/$1$2/"
+    - "derive/^([A-Z]{2,})[a-z]+$/$1/"
+    - "derive/^([A-Z]{3})[A-Z]$/$1/"
+    - "derive/^([A-Z]{4})[A-Z]+$/$1/"
+    - "fuzz/^([A-Z]{2})[A-Z]+$/$1/"
+    - "fuzz/^([A-Z])([a-z])[a-z]*$/$1$2/"
+    - "xform/([A-Z])/\\l$1/"
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " ;"
+style:
+  color_scheme: lost_temple
+  font_face: "TH-Tshyn-P2,TH-Tshyn-P1,TH-Tshyn-P0,SunmanPUA"
+  font_point: 14
+  horizontal: false
+switches:
+  - name: ascii_mode
+    reset: 1
+    states: ["中文", "英文"]
+  - name: pinyin_simp
+    reset: 1
+    states: ["漢字", "汉字"]
+  - name: full_shape
+    states: ["半角", "全角"]
+  - name: ascii_punct
+    states: ["，。", "，．"]
+translator:
+  comment_format:
+    - "xlit/_/|/"
+  dictionary: shanren
+  prism: shanren
+  spelling_hints: 2
+  strict_spelling: true

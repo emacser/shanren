@@ -1,0 +1,128 @@
+# Rime schema
+# encoding: utf-8
+schema:
+  schema_id: shanren
+  name: "山人"
+  author:
+    - "谢振斌"
+  description: |
+    山人全息码
+  version: 2013.12.16
+  dependencies:
+    - pinyin_simp
+    - shanren100
+
+switches:
+  - name: ascii_mode
+    reset: 1
+    states: [中文,英文]
+  - name: pinyin_simp
+    reset: 1
+    states: ["漢字", "汉字"]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ ，。, ，． ]
+
+ascii_composer:
+  switch_key:
+    #Shift_L: commit_text
+    #Shift_R: noop
+    #Control_L: inline_ascii
+    #Control_R: inline_ascii
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba'
+  delimiter: " ;"
+  algebra:
+    # 先去掉后面的拆字
+    - xform/^([A-Za-z]+)_.*$/$1/
+    # 从A...Zza衍生出Aa...Zz
+    - derive/^([A-Z])([A-Z]+)([a-z])([a-z])$/$1$4$2$3/
+    # A...Zza简写为A...Zz
+    - derive/^([A-Z]+)([a-z])[a-z]$/$1$2/
+    # 省略至少两大写编码后面的小写编码
+    - derive/^([A-Z]{2,})[a-z]+$/$1/
+    # ABCD简写为ABC
+    - derive/^([A-Z]{3})[A-Z]$/$1/
+    # ABCDE...简写为ABCD
+    - derive/^([A-Z]{4})[A-Z]+$/$1/
+    # 全大写编码的前两码模糊组词
+    - fuzz/^([A-Z]{2})[A-Z]+$/$1/
+    # 如果第一个字母是大写后面都是小写，前两码组词
+    - fuzz/^([A-Z])([a-z])[a-z]*$/$1$2/    
+    # 所有的大写变成小写
+    - xform/([A-Z])/\l$1/
+
+translator:
+  dictionary: shanren
+  prism: shanren
+  spelling_hints: 2
+  strict_spelling: true
+  comment_format:
+    # 只显示字根
+    #- "xform/[A-Za-z]+_//"
+    # 只显示编码
+    #- "xform/_[^A-Za-z ]*//"
+    # _换|
+    - xlit/_/|/
+
+reverse_lookup:
+  dictionary: pinyin_simp
+  prism: pinyin_simp
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+
+punctuator:
+  import_preset: default
+  full_shape:
+    "/" : "、"
+    "\\" : [ "＼", "／", "÷" ]
+  half_shape:
+    "/" : "、"
+    "\\" : [ "\\", "/" ]
+
+key_binder:
+  bindings:
+    - {accept: comma, send: Page_Up, when: has_menu}
+    - {accept: period, send: Page_Down, when: has_menu}
+    - {accept: "Shift+Shift_L", send: 2, when: has_menu}
+    - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+    - {accept: Tab, send: ";", when: composing}
+    - {accept: Control+d, send: Shift+Delete, when: composing}
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+
+simplifier:
+  option_name: pinyin_simp
